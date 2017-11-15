@@ -64,9 +64,9 @@ func (d *Driver) CreateVolume(name string, size uint64) (*csi.VolumeInfo, error)
 	return &csi.VolumeInfo{
 		Id: uuid.NewV4().String(),
 		Attributes: map[string]string{
-			"Name":   name,
-			"Status": lvStatus,
-			"LVPath": lvPath,
+			"name":   name,
+			"status": lvStatus,
+			"lvPath": lvPath,
 		},
 		CapacityBytes: size,
 	}, nil
